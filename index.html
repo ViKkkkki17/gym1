@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Тренажерный зал Мускул Time</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <style>
+  .reviews { margin-bottom: 25vh; }
+  .reviews .content1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 2vh 0;
+  }
+	.reviews .content1 .text {
+		width:42%;
+		background:url(img/trenajer.jpg) no-repeat center center;
+		background-size: cover;
+		color:#C7C4C4;
+
+		display: flex;
+		align-items: center;
+	}
+	.reviews .content1 .text > DIV {
+		padding:0 15%;
+	}
+	.reviews .content1 .image {
+		width:45%;
+		margin:5vw 10% -5vw 0;
+	}
+
+  .reviews .content2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 2vh 0;
+  }
+	.reviews .content2 .text {
+		width:50%;
+		background:url(img/zal.jpg) no-repeat center center;
+		background-size: cover;
+		color:#C7C4C4;
+
+		display: flex;
+		align-items: center;
+
+		position:absolute;
+		right:0;
+		height:95%;
+		margin:5vw 0 0 0;
+	}
+	.reviews .content2 .text > DIV {
+		padding:0 15%;
+	}
+	.reviews .content2 .image {
+		width:52%; margin:0 0 0 5vw;
+	}
+  @media screen and (max-width: 800px) {
+	.reviews { margin-bottom: 15vh; }
+
+	.reviews .content1 { padding: 8vh 0 0 0; }
+	.reviews .content1 .image { width:25%; margin:-5vw 0 0 0; overflow:hidden; }
+	.reviews .content1 .image IMG { width:200%; margin-left:-50% }
+	.reviews .content1 .text { width:70%; }
+	.reviews .content1 .text > DIV { padding:8vh 10%; }
+
+	.reviews .content2 .image { width:25%; margin:2vw 0 0 0; overflow:hidden; }
+	.reviews .content2 .image IMG { width:200%; margin-left:-50% }
+	.reviews .content2 .text { margin-top:-10vw; width:70%; position:relative; height: auto; }
+	.reviews .content2 .text > DIV { padding:8vh 10%; }
+  }
+
+  </style>
+</head>
+
+<body>
+
+<div id="pod-menu"></div>
+<div class="mob_menu"><i></i><i></i><i></i></div>
+
+<header class='black_bg'>
+
+	<ul class="menu">
+		<li><a href="#about">О нас</a></li>
+		<li><a href="#zaly">Залы</a></li>
+		<li><a href="#stock">Акции</a></li>
+		<li><a href="#reviews">Отзывы</a></li>
+		<li><a href="contact.html">Контакты</a></li>
+	</ul>
+	<div class="city">Санкт-Петербург</div>
+
+	<div class="content align-center">
+		<h1 class="site_name">Мускул Time</h1>
+		<div class="text1">Тренажерный зал</div>
+		<div class="text2">для здоровья и хорошего настроения</div>
+		<div><a href='#order'><input type="button" class="but font-size-2" value="Записаться"></a></div>
+	</div>
+
+</header>
+
+<a name='about'></a>
+<section class="win about">
+	<div><img src="img/about.jpg" alt=""></div>
+	<div>
+		<h3 class="font-size-4">О нас</h3>
+		<p class="font-size-2">
+			Мускул Time - это не просто место для занятий спортом, это образ жизни. Мы предлагаем современные тренажеры и индивидуальные программы тренировок, разработанные нашими опытными тренерами.
+			В "Мускул Time" вы найдете все необходимое для достижения ваших фитнес-целей: от кардио-зоны до силовых тренировок и групповых занятий.
+		</p>
+		<p id="hidden1" class="font-size-2" style="display:none">
+			Наш клуб открыт для всех, вне зависимости от уровня подготовки. Мы стремимся создать дружественную и мотивирующую атмосферу, где каждый чувствует себя комфортно. Наши профессиональные тренеры всегда готовы помочь вам разработать эффективную программу тренировок и дать советы по питанию.
+		</p>
+		<div><input type="button" onClick="OpenText(this, 'hidden1')" class="but font-size-2" value="Подробнее..."></div>
+	</div>
+</section>
+
+<a name='stock'></a>
+<section class="win stock">
+	   <div>
+		<div class="img-chashki"><img src="img/skidka.jpg" alt=""></div>
+		<img src="img/para.jpg" alt="">
+	   </div>
+	   <div>
+		<h3 class="font-size-4">Акция месяца</h3>
+		<p class="font-size-2">Парам годовой абонемент по цене 6 месяцев. Только в марте!</p>
+
+	   </div>
+	<div><input type="button" class="but font-size-2" value="Получить" onClick="InputPhone()"></div>
+</section>
+
+<a name='zaly'></a>
+<section class="win photoZAL">
+	<h2 class="font-size-4">Спортивные залы</h2>
+
+	<div class="content">
+		<div class='photos'>
+			<span id='butDown'></span>
+			<span id='butUp'></span>
+
+			<div class='okno'>
+				<div><a href='zal1.html'><img src='img/zal.jpg' alt=''></a></div>
+				<div><a href='zal2.html'><img src='img/trenajer.jpg' alt=''></a></div>
+				<div><a href='zal3.html'><img src='img/ioga.jpg' alt=''></a></div>
+				<div><a href='zal4.html'><img src='img/bassein.jpg' alt=''></a></div>
+			</div>
+		</div>
+		<div class='text'>
+			<p class='font-size-2'>Мускул Time приглашает вас на путь к здоровью и активному образу жизни.</p>
+			<p class='font-size-2'>Наши современные тренажеры и персональные программы помогут вам достичь ваших целей.</p>
+			<div><a href='zal1.html'><input type="button" class="but font-size-2" value="Тренажёрный зал"></a></div>
+		</div>
+	</div>
+</section>
+
+
+<a name='reviews'></a>
+<section class="reviews">
+		<h3 class="font-size-4 align-center">Отзывы посетителей</h3>
+
+		<div class='content1'>
+			<div class='text black_bg'>
+				<div>
+					<p class='font-size-3'>Елена</p>
+					<p class='font-size-2'>Прекрасное, душевное место со своей атмосферой. Хожу сюда почти каждый день, занимаюсь, бегаю и плаваю.</p>
+				</div>
+			</div>
+			<div class='image'><img src='img/review1.jpg' alt=''></div>
+		</div>
+
+		<div class='content2'>
+			<div class='image'><img src='img/review2.jpg' alt=''></div>
+			<div class='text black_bg'>
+				<div>
+				<p class='font-size-3'>Геннадий</p>
+				<p class='font-size-2'>Очень люблю это место! Такой атмосферы больше нет нигде в городе. Встречаюсь с друзьями, знакомлюсь с девушками.</p>
+				</div>
+			</div>
+		</div>
+</section>
+
+
+<a name='order'></a>
+<section class="order black_bg">
+	<div class='content'>
+		<h2 class="font-size-4">Забронировать место</h2>
+
+		<div class='myForm'>
+			<div><input type='text' name='Name' value='' placeholder='Ваше имя' class='font-size-2'></div>
+			<div><input type='text' name='Phone' value='' placeholder='Номер телефона' class='font-size-2'></div>
+			<div><input type="button" class="but font-size-2" value="Мы перезвоним"></div>
+		</div>
+	</div>
+</section>
+
+<footer class="win font-size-1">
+	<div class="social">
+		<a href="#" class="ico"><img src="img/ico_13.png" alt=""></a>
+		<a href="#" class="ico"><img src="img/ico_14.png" alt=""></a>
+
+		<a href="tel:+79213332211" class="tel">+7 (921) 333-22-11</a>
+	</div>
+
+	<ul class="links">
+		<li><a href="contact.html">Контакты</a></li>
+		<li><a href="politica.html">Политика конфиденциальности</a></li>
+	</ul>
+
+	<div class="address">Санкт-Петербург, Дунайский пр., 9</div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+function OpenText(t, id){
+	// Открытие закрытого блока
+	document.getElementById(id).style.display = "block";
+	// Скрытие кнопки, на которую нажали
+	t.style.display = "none";
+}
+</script>
+
+</body>
+</html>
